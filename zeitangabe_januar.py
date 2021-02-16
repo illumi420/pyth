@@ -1,0 +1,5 @@
+print("Der Monat Januar hat")
+print(31,"Tage")
+print(24 * 31,"Stunden")
+print(744 * 60, "Minuten")
+print(round((44640 * 3600)/60), "Sekunden")
