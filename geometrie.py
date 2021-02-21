@@ -65,6 +65,6 @@ for element in list:
     elif num == list[4]:
         exit()
     else:
-        print("Sie habe eine fehlerhafte Auswahl getroffen.")
+        print("Sie haben eine fehlerhafte Auswahl getroffen.")
     if volumen != 0:
         print(f"Volume :", volumen, "cm\u00b3")
