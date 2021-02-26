@@ -1,4 +1,3 @@
-
 # Python 3.x code to demonstrate star pattern
 
 # Function to demonstrate printing pattern triangle
