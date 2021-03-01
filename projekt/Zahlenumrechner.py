@@ -14,23 +14,29 @@ def main_menu():
 main_menu()
 
 wahl = ""
-menu = ("1", "2", "3", "4", "q")
+# menu = ("1", "2", "3", "4", "q")
 while wahl != "q":
-    for i in menu:
-        wahl = input(f"\nIhre Wahl: ").lower()
+    # for i in menu:
+    wahl = input(f"\nIhre Wahl: ").lower()
 
-      # convert from Hex
-
-        if wahl == "1":
-            zahl = input("Bitte Zahl für Umrechnung eingeben: ").upper()
-            print("Eingegebene Zahl umrechnen in ...")
+    if wahl == "1" or wahl == "2" or wahl == "3" or wahl == "4":
+        zahl = input("Bitte Zahl für Umrechnung eingeben: ").upper()
+        if wahl != "1":
+            print("(h) Hexadezimalzahl")
+        if wahl != "2":
             print("(d) Dezimalzahl")
+        if wahl != "3":
             print("(o) Oktalzahl")
+        if wahl != "4":
             print("(b) Dualzahl")
+    else:
+        if wahl == "q":
+            print("End.")
+        else:
+            print("Fehlerhafte Auswahl versuchen Sie bitte nochmal")
 
-            sub_menu = ("d", "o", "b")
-            select = input("Ihre Wahl: ").lower()
-            for element in sub_menu:
+"""  
+           # convert from Hex
                 if select == "d":
                     sysconv.hexToDec(zahl)
                     input(f"\nWeiter mit der Eingabe-Taste")
@@ -49,21 +55,10 @@ while wahl != "q":
                     print("")
                     main_menu()
                     break
-                else:
-                    print("Fehlerhafte Auswahl versuchen Sie bitte nochmal")
+               
 
       # convert from Dec
 
-        elif wahl == "2":
-            zahl = int(input("Bitte Zahl für Umrechnung eingeben: "))
-            print("Eingegebene Zahl umrechnen in ...")
-            print("(h) Hexdezimalzahl")
-            print("(o) Oktalzahl")
-            print("(b) Dualzahl")
-
-            sub_menu = ("h", "o", "b")
-            select = input("Ihre Wahl: ").lower()
-            for element in sub_menu:
                 if select == "h":
                     sysconv.decToHex(zahl)
                     input(f"\nWeiter mit der Eingabe-Taste")
@@ -88,16 +83,9 @@ while wahl != "q":
 
       # convert from Oct
 
-        elif wahl == "3":
-            zahl = int(input("Bitte Zahl für Umrechnung eingeben: "))
-            print("Eingegebene Zahl umrechnen in ...")
-            print("(d) Dezimalzahl")
-            print("(h) Hexdezimalzahl")
-            print("(b) Dualzahl")
-
-            sub_menu = ("d", "h", "b")
-            select = input("Ihre Wahl: ").lower()
-            for element in sub_menu:
+       
+        
+         
                 if select == "d":
                     sysconv.octToDec(zahl)
                     input(f"\nWeiter mit der Eingabe-Taste")
@@ -116,21 +104,13 @@ while wahl != "q":
                     print("")
                     main_menu()
                     break
-                else:
-                    print("Fehlerhafte Auswahl versuchen Sie bitte nochmal")
+               
 
       # convert from Bin
 
-        elif wahl == "4":
-            zahl = int(input("Bitte Zahl für Umrechnung eingeben: "))
-            print("Eingegebene Zahl umrechnen in ...")
-            print("(d) Dezimalzahl")
-            print("(h) Hexdezimalzahl")
-            print("(o) Oktalzahl")
+       
 
-            sub_menu = ("d", "h", "o")
-            select = input("Ihre Wahl: ").lower()
-            for element in sub_menu:
+         
                 if select == "d":
                     sysconv.binToDec(zahl)
                     input(f"\nWeiter mit der Eingabe-Taste")
@@ -149,10 +129,6 @@ while wahl != "q":
                     print("")
                     main_menu()
                     break
-                else:
-                    print("Fehlerhafte Auswahl versuchen Sie bitte nochmal")
+               
 
-        elif wahl == "q":
-            exit()
-        else:
-            print("Fehlerhafte Auswahl versuchen Sie bitte nochmal")
+                """
