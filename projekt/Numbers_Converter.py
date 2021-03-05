@@ -1,7 +1,7 @@
 import numeral_sys_converter as sysconv
 
-
-def main_menu():
+choice = ""
+while choice != "q":
     print("Numbers Converter")
     print("Please Choose ....")
     print("(1) Hexadecimal number convert.")
@@ -9,12 +9,6 @@ def main_menu():
     print("(3) Octal number convert.")
     print("(4) Binary number convert.")
     print("(q) quit")
-
-
-main_menu()
-
-choice = ""
-while choice != "q":
     choice = input(f"\nYour choice: ").lower()
 
     if choice == "1" or choice == "2" or choice == "3" or choice == "4":
@@ -44,7 +38,6 @@ while choice != "q":
 
         input(f"\nPress Enter to continue")
         print("")
-        main_menu()
 
     else:
         if choice == "q":

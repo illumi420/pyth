@@ -25,10 +25,10 @@ def toDec(number_input, numbersystem):
     exponent = 0
     for i in range(length, -1, -1):
         try:
-            zahl = int(number_input[i])
+            number = int(number_input[i])
         except:
-            zahl = hexToInt(number_input[i])
-        dec += base**exponent * zahl
+            number = hexToInt(number_input[i])
+        dec += base**exponent * number
         exponent += 1
     return dec
 
