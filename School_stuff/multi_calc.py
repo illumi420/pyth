@@ -366,7 +366,7 @@ while num != "q":
 
     # Factorial
         elif num == list[14]:
-            print("Fractorial")
+            print("Factorial")
             print("(0) to go back to main menu")
 
             def factorial(n):
