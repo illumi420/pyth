@@ -13,15 +13,24 @@ def computepay(h, r):
 
 
 def main_menu():
-    print(" ____    ____          __   _    _    ______          __                   ")
     print(
-        "|_   \  /   _|        [  | / |_ (_) .' ___  |        [  |                  ")
-    print("  |   \/   |  __   _   | |`| |-'__ / .'   \_|__   _   | |  .---.  __   _   ")
+        " ____    ____          __   _    _    ______          __                   "
+    )
     print(
-        "  | |\  /| | [  | | |  | | | | [  || |      [  | | |  | | / /'`\][  | | |  ")
-    print(" _| |_\/_| |_ | \_/ |, | | | |, | |\ `.___.'\| \_/ |, | | | \__.  | \_/ |, ")
+        "|_   \  /   _|        [  | / |_ (_) .' ___  |        [  |                  "
+    )
     print(
-        "|_____||_____|'.__.'_/[___]\__/[___]`.____ .''.__.'_/[___]'.___.' '.__.'_/ ")
+        "  |   \/   |  __   _   | |`| |-'__ / .'   \_|__   _   | |  .---.  __   _   "
+    )
+    print(
+        "  | |\  /| | [  | | |  | | | | [  || |      [  | | |  | | / /'`\][  | | |  "
+    )
+    print(
+        " _| |_\/_| |_ | \_/ |, | | | |, | |\ `.___.'\| \_/ |, | | | \__.  | \_/ |, "
+    )
+    print(
+        "|_____||_____|'.__.'_/[___]\__/[___]`.____ .''.__.'_/[___]'.___.' '.__.'_/ "
+    )
     print()
     print()
     print("Calculate Volume of a geometric body")
@@ -36,18 +45,19 @@ def main_menu():
     print()
     print("Other Calculations")
     print(" (9) How much Time in a Month")
-    print("(10) Temperature")
-    print("(11) Meter to inch/foot/yard")
-    print("(12) Your weight on the Moon")
-    print("(13) Sum of Digits in a number")
-    print("(14) Factorial")
-    print("(15) Divisiblity with no Rest")
+    print("(10) Leap Year")
+    print("(11) Temperature")
+    print("(12) Meter to inch/foot/yard")
+    print("(13) Your weight on the Moon")
+    print("(14) Sum of Digits in a number")
+    print("(15) Factorial")
+    print("(16) Divisiblity with no Rest")
     print()
     print("Economical Calculations")
-    print("(16) Saving account after 1 year")
-    print("(17) Commission (bounus for employees of 5 years and above)")
-    print("(18) Project Profitability and Payback time")
-    print("(19) Gross pay")
+    print("(17) Saving account after 1 year")
+    print("(18) Commission (bounus for employees of 5 years and above)")
+    print("(19) Project Profitability and Payback time")
+    print("(20) Gross pay")
     print()
     print("(q) leave program")
     print()
@@ -55,14 +65,14 @@ def main_menu():
 
 main_menu()
 
-list = ("1", "2", "3", "4", "5", "6", "7",
-        "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "q")
+list = ("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13",
+        "14", "15", "16", "17", "18", "19", "20", "q")
 num = ""
 while num != "q":
     for i in list:
         num = input("select: ").lower()
 
-    # Cone
+        # Cone
         if num == list[0]:
             print("Cone")
             print("(0) to go back to main menu")
@@ -75,8 +85,8 @@ while num != "q":
                 main_menu()
                 break
             if r > 0 and h > 0:
-                print(f"Volume:", (1/3) * math.pi *
-                      math.pow(r, 2) * h, "cm\u00b3")
+                print(f"Volume:", (1 / 3) * math.pi * math.pow(r, 2) * h,
+                      "cm\u00b3")
                 input("press Enter to continue")
                 main_menu()
 
@@ -123,7 +133,7 @@ while num != "q":
                 main_menu()
                 break
             if a > 0 and b > 0 and c > 0:
-                print(f"Volume:", a*b*c, "cm\u00b3")
+                print(f"Volume:", a * b * c, "cm\u00b3")
                 input("press Enter to continue")
                 main_menu()
             else:
@@ -155,7 +165,7 @@ while num != "q":
                 main_menu()
                 break
             if r > 0:
-                print(f"Volume:", 4/3 * math.pi * math.pow(r, 3), "cm\u00b3")
+                print(f"Volume:", 4 / 3 * math.pi * math.pow(r, 3), "cm\u00b3")
                 input("press Enter to continue")
                 main_menu()
             else:
@@ -180,7 +190,7 @@ while num != "q":
                 main_menu()
                 break
             if l > 0 and w > 0 and h > 0:
-                print(f"Volume:", 1/3 * l * w * h, "cm\u00b3")
+                print(f"Volume:", 1 / 3 * l * w * h, "cm\u00b3")
                 input("press Enter to continue")
                 main_menu()
             else:
@@ -227,13 +237,14 @@ while num != "q":
                 main_menu()
             else:
                 print(
-                    f"A Tin Can with the radius of {r} and the height of {h} has the following values:")
+                    f"A Tin Can with the radius of {r} and the height of {h} has the following values:"
+                )
                 print(f"... a Diameter of", 2 * r)
                 print(f"... an Extent of", r * 2 * pi)
                 print(f"... an Area of", r**2 * pi)
                 print(f"... an Outer surface of", h * (r * 2 * pi))
-                print(f"... a Volume of", (r**2 * pi * h) -
-                      0.1 * (r**2 * pi * h), "cm\u00b3")
+                print(f"... a Volume of",
+                      (r**2 * pi * h) - 0.1 * (r**2 * pi * h), "cm\u00b3")
                 input("press Enter to continue")
                 main_menu()
 
@@ -253,7 +264,7 @@ while num != "q":
                 print(f"{month} has")
                 print(24 * days, "Hours")
                 print((24 * days) * 60, "Minutes")
-                print((24 * days * 60 * 3600)/60, "Seconds")
+                print((24 * days * 60 * 3600) / 60, "Seconds")
                 input("press Enter to continue")
                 main_menu()
             else:
@@ -261,18 +272,43 @@ while num != "q":
                 input("press Enter to continue")
                 main_menu()
 
-    # Temperature
+    # Leap Year
+
         elif num == list[9]:
+            print("Leap Year")
+            print("(0) to go back to main menu")
+            my_year = int(input("Please Input a Year: "))
+            if my_year == 0:
+                main_menu()
+                break
+
+            sentence_to_print_if_leap_year = "is a leap year"
+            sentence_to_print_if_not_leap_year = "is not a leap year"
+
+            is_my_year_divisible_by_4 = my_year % 4 == 0
+            is_my_year_divisible_by_100 = my_year % 100 == 0
+            is_my_year_divisible_by_400 = my_year % 400 == 0
+
+            if is_my_year_divisible_by_4 and is_my_year_divisible_by_100 and is_my_year_divisible_by_400 or is_my_year_divisible_by_4 and not is_my_year_divisible_by_100 and not is_my_year_divisible_by_400:
+                print(my_year, sentence_to_print_if_leap_year)
+
+            else:
+                print(my_year, sentence_to_print_if_not_leap_year)
+                input("press Enter to continue")
+                main_menu()
+
+    # Temperature
+        elif num == list[10]:
             print("Temperature")
             celsius = float(input("Degree Celsius "))
             print(f"{int(celsius)}° Celsius in")
             print("Kelvin:", celsius + 273.15)
-            print("Fahrenheit:", (celsius * 90/50)+32)
+            print("Fahrenheit:", (celsius * 90 / 50) + 32)
             input("press Enter to continue")
             main_menu()
 
     # Meter
-        elif num == list[10]:
+        elif num == list[11]:
             print("Meter")
             print("(0) to go back to main menu")
             distance = float(input("Distance in Meter "))
@@ -291,7 +327,7 @@ while num != "q":
                 main_menu()
 
     # Weight on Moon
-        elif num == list[11]:
+        elif num == list[12]:
             print("Weight on Moon")
             print("(0) to go back to main menu")
             weight = int(input("How much you weight "))
@@ -308,12 +344,13 @@ while num != "q":
                 main_menu()
 
     # Sum of Digits
-        elif num == list[12]:
+        elif num == list[13]:
             print("Sum of Digits")
             print("(0) to go back to main menu")
             sum_of_digits = 0
             number = input(
-                "Please give a number in which You want to Calculate its Digits: ")
+                "Please give a number in which You want to Calculate its Digits: "
+            )
             if weight == "0":
                 main_menu()
                 break
@@ -328,7 +365,7 @@ while num != "q":
                 main_menu()
 
     # Factorial
-        elif num == list[13]:
+        elif num == list[14]:
             print("Fractorial")
             print("(0) to go back to main menu")
 
@@ -337,7 +374,7 @@ while num != "q":
                 if n == 0:
                     return 1
                 else:
-                    return n * factorial(n-1)
+                    return n * factorial(n - 1)
 
             num_input = int(
                 input("which number do you want to get it's factorial? "))
@@ -349,7 +386,7 @@ while num != "q":
             main_menu()
 
     # Divisibility
-        elif num == list[14]:
+        elif num == list[15]:
             print("Divisibility")
             dividend = int(input("Dividend: "))
             divisor = int(input("Divisor: "))
@@ -363,12 +400,13 @@ while num != "q":
                 main_menu()
             else:
                 print(
-                    f"a division with no Rest is possible. the Result of {dividend} / {divisor} is:", dividend / divisor)
+                    f"a division with no Rest is possible. the Result of {dividend} / {divisor} is:",
+                    dividend / divisor)
                 input("press Enter to continue")
                 main_menu()
 
     # Savings in 1 year
-        elif num == list[15]:
+        elif num == list[16]:
             print("Savings in 1 year")
             print("(0) to go back to main menu")
             savings = float(input("Savings on account: "))
@@ -381,7 +419,7 @@ while num != "q":
                 break
             if savings > 0:
                 print(f"your Savings after 1 Year:",
-                      (savings * intrest_rate)/100 + savings)
+                      (savings * intrest_rate) / 100 + savings)
                 input("press Enter to continue")
                 main_menu()
             else:
@@ -390,7 +428,7 @@ while num != "q":
                 main_menu()
 
     # Commission
-        elif num == list[16]:
+        elif num == list[17]:
             print("Commission")
             print("(0) to go back to main menu")
             annual_turnover = int(input("annual turnover: "))
@@ -417,7 +455,7 @@ while num != "q":
                 main_menu()
 
     # Project Profitability and Payback time
-        elif num == list[17]:
+        elif num == list[18]:
             print("Project Profitability")
             print("(0) to go back to main menu")
             capital_used = int(input("capital: "))
@@ -438,7 +476,7 @@ while num != "q":
             main_menu()
 
     # Gross pay
-        elif num == list[18]:
+        elif num == list[19]:
             print("Gross pay")
             print("(0) to go back to main menu")
             hrs = int(input("Enter Working Hours: "))
