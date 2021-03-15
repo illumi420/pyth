@@ -351,7 +351,7 @@ while num != "q":
             number = input(
                 "Please give a number in which You want to Calculate its Digits: "
             )
-            if weight == "0":
+            if number == "0":
                 main_menu()
                 break
             sum_of_digits = sum(int(digit) for digit in str(number))
