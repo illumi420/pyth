@@ -1,6 +1,17 @@
 import math
 
 
+def computepay(h, r):
+    working_hours = 40
+    result = working_hours * r
+    extra_h = h > working_hours
+    if extra_h:
+        extra_r = r * 1.5
+        extra = (h - working_hours) * extra_r
+        result += extra
+    return result
+
+
 def main_menu():
     print(" ____    ____          __   _    _    ______          __                   ")
     print(
@@ -20,10 +31,10 @@ def main_menu():
     print(" (4) Cube")
     print(" (5) Sphere")
     print(" (6) Pyramid")
-    print()
-    print("Other Calculations")
     print(" (7) Circle")
     print(" (8) Tin can")
+    print()
+    print("Other Calculations")
     print(" (9) How much Time in a Month")
     print("(10) Temperature")
     print("(11) Meter to inch/foot/yard")
@@ -31,8 +42,12 @@ def main_menu():
     print("(13) Sum of Digits in a number")
     print("(14) Factorial")
     print("(15) Divisiblity with no Rest")
+    print()
+    print("Economical Calculations")
     print("(16) Saving account after 1 year")
     print("(17) Commission (bounus for employees of 5 years and above)")
+    print("(18) Project Profitability and Payback time")
+    print("(19) Gross pay")
     print()
     print("(q) leave program")
     print()
@@ -41,7 +56,7 @@ def main_menu():
 main_menu()
 
 list = ("1", "2", "3", "4", "5", "6", "7",
-        "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "q")
+        "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "q")
 num = ""
 while num != "q":
     for i in list:
@@ -400,6 +415,41 @@ while num != "q":
                 print("False input Value")
                 input("press Enter to continue")
                 main_menu()
+
+    # Project Profitability and Payback time
+        elif num == list[17]:
+            print("Project Profitability")
+            print("(0) to go back to main menu")
+            capital_used = int(input("capital: "))
+            if capital_used == 0:
+                main_menu()
+                break
+            win_per_year = int(input("Win / Year: "))
+            duration_depreciaton = int(
+                input("Duration of imputed depreciation: "))
+            depreciation = capital_used / duration_depreciaton
+            profitability = round(win_per_year * 100 / capital_used, 2)
+            payback_time = capital_used / (depreciation + win_per_year)
+            print(f"Profitability: {profitability} %")
+            year = int(payback_time)
+            month = math.ceil(payback_time * 12) % 12
+            print(f"Payback in: {year} Years, {month} Months")
+            input("press Enter to continue")
+            main_menu()
+
+    # Gross pay
+        elif num == list[18]:
+            print("Gross pay")
+            print("(0) to go back to main menu")
+            hrs = int(input("Enter Working Hours: "))
+            if hrs == 0:
+                main_menu()
+                break
+            rate = float(input("Enter Rate/hour: "))
+            p = computepay(hrs, rate)
+            print("Pay", p)
+            input("press Enter to continue")
+            main_menu()
 
         elif num == list[-1]:
             exit()

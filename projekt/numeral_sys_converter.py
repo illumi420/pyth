@@ -29,6 +29,9 @@ def toDec(number_input, numbersystem):
         except:
             number = hexToInt(number_input[i])
         dec += base**exponent * number
+        print("")
+        print(base**exponent)
+        print(dec)
         exponent += 1
     return dec
 
@@ -62,5 +65,8 @@ def decTo(number_input, resultsystem):
         else:
             rest = str(number_input % divisor)
         result = rest + result
+        print("")
+        print("rest", rest)
         number_input = number_input // divisor
+        print("dividend", number_input)
     return result
