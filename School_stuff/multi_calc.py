@@ -289,7 +289,10 @@ while num != "q":
             is_my_year_divisible_by_100 = my_year % 100 == 0
             is_my_year_divisible_by_400 = my_year % 400 == 0
 
-            if is_my_year_divisible_by_4 and is_my_year_divisible_by_100 and is_my_year_divisible_by_400 or is_my_year_divisible_by_4 and not is_my_year_divisible_by_100 and not is_my_year_divisible_by_400:
+            if (is_my_year_divisible_by_4 and is_my_year_divisible_by_100
+                    and is_my_year_divisible_by_400) or (
+                        is_my_year_divisible_by_4
+                        and not is_my_year_divisible_by_100):
                 print(my_year, sentence_to_print_if_leap_year)
 
             else:
