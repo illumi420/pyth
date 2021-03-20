@@ -1,7 +1,6 @@
 questions = ["Is the project broken down into work packages and Tasks? ", "Is the structure defined? ",
              "Has The work packages and the tasks been assigned in the project structure plan? ", "Has the tasks and work packages been coded? ", "Has the completeness been checked? "]
 
-
 question_answer = {}
 
 
