@@ -9,15 +9,15 @@ questions = [
 question_answer = {}
 
 
-def questionnaireFunc(q_list):
+def questionnaireFunc(q_list, q_a_list):
     print("Answer the questions with yes or no.")
     for i in q_list:
         answer = input(i).lower()
         #assaining list item as key and item input as value
-        question_answer[i] = answer
+        q_a_list[i] = answer
 
 
-questionnaireFunc(questions)
+questionnaireFunc(questions, question_answer)
 
 
 def checkAnswers(q_a_list):
