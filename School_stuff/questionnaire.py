@@ -26,7 +26,7 @@ def checkAnswers(q_a_list):
             "For the following questions, work steps are apparently still pending in the planning:"
         )
         for key, value in q_a_list.items():
-            if "no" == value:
+            if value == "no":
                 print(key)
 
     elif all("yes" in value for value in q_a_list.items()):
