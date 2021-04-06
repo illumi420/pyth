@@ -22,12 +22,6 @@ def checkAnswers(q_a_list):
         print(
             "You have done a good job and can continue with the timing as planned."
         )
-<<<<<<< HEAD
-=======
-        for key, value in q_a_list.items():
-            if value == "no":
-                print(key)
->>>>>>> 4b48f7345b9e874cd71a41f7f5374a74726a4e8e
 
     else:
         print(
